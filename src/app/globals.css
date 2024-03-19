@@ -24,3 +24,11 @@ body{
     text-wrap: balance;
   }
 }
+
+.x-scroll::-webkit-scrollbar{
+width: 8px;
+}
+.x-scroll::-webkit-scrollbar-thumb{
+  background: #76ABAE;
+  border-radius: 1000px;
+}

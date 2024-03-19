@@ -11,7 +11,7 @@ const DiscussionBtn: React.FC<PropsType> = (props) => {
   return (
     <div
       className={classNames(
-        `flex items-center gap-2 w-1/4 justify-center border-r py-5 border-x-accent-base/30`,
+        `flex items-center gap-2 w-1/4 justify-center border-r py-5 border-x-accent-base/30 transition-colors`,
         {
           "hover:bg-red-500 hover:text-white": props.color === "RED",
           "hover:bg-black hover:text-white": props.color === "BLACK",

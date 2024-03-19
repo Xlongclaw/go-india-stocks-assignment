@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex h-screen">
+        <main className="flex h-screen overflow-hidden">
           <Drawer />
           {children}
         </main>

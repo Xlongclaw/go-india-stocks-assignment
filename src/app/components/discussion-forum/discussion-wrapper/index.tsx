@@ -14,13 +14,14 @@ type PropsType = {
     postedAt: string;
     likes: number;
     views: number;
+    images: Array<string>;
     comments: Array<{}>;
   };
 };
 
 const DiscussionWrapper: React.FC<PropsType> = (props) => {
   return (
-    <div className="border border-x-accent-light/20 pb-0 p-6 rounded-3xl my-4 shadow hover:shadow-none cursor-pointer transition-all">
+    <div className="border border-x-accent-light/20 pb-0 p-6 rounded-3xl mb-8 shadow hover:shadow-none cursor-pointer transition-all">
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
           return (
@@ -40,6 +41,12 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
             </div>
           );
       })}
+      <div className="flex my-4 justify-between">
+        {props.post.images.map((image) => (
+          
+          <img style={{width:`${98/props.post.images.length}%`,borderRadius:20,objectFit:'cover',maxHeight:160}} src={image} key={image} alt="" />
+        ))}
+      </div>
       <p className="text-2xl text-x-accent-base my-4 poppins font-bold ">
         {props.post.postText}
       </p>

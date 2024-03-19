@@ -25,7 +25,7 @@ const USER_DATA: UserData = {
 const OTHER_USERS_DATA: Array<UserData> = [
   {
     name: "Walter White",
-    userName: "walterwhite420",
+    userName: "walterwhite410",
     userImage:
       "https://res.cloudinary.com/dlxpf7d8c/image/upload/v1710861629/ta6wnzzzcrqbznpiio3s.jpg",
     status: "Legend",
@@ -36,7 +36,7 @@ const OTHER_USERS_DATA: Array<UserData> = [
     userName: "madhureshverma790",
     userImage:
       "https://res.cloudinary.com/dlxpf7d8c/image/upload/v1710854361/gje3vo4nceqb9gfpedtj.png",
-    status: "Legend",
+    status: "Diamond",
     des: "Stock market Giant",
   },
 ];
