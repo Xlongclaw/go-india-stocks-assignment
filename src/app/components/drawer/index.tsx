@@ -5,10 +5,10 @@ import DrawerToggleBtn from "./drawer-toggle-btn";
 
 const Drawer = () => {
   return (
-    <section className="bg-slate-900 text-white h-full flex">
+    <section className="bg-x-accent-base text-white h-full flex">
       <div>
         <UserInfoSection />
-        <OptionsList />
+        {/* <OptionsList /> */}
       </div>
       <DrawerToggleBtn />
     </section>
