@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="flex h-screen">
           <Drawer />
-          {/* {children} */}
+          {children}
         </main>
       </body>
     </html>

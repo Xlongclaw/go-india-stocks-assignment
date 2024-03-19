@@ -10,7 +10,7 @@ const Drawer = () => {
         <UserInfoSection />
         <OptionsList />
       </div>
-      {/* <DrawerToggleBtn /> */}
+      <DrawerToggleBtn />
     </section>
   );
 };
