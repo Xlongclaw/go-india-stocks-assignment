@@ -8,9 +8,9 @@ const Drawer = () => {
     <section className="bg-x-accent-base text-white h-full flex">
       <div>
         <UserInfoSection />
-        {/* <OptionsList /> */}
+        <OptionsList />
       </div>
-      <DrawerToggleBtn />
+      {/* <DrawerToggleBtn /> */}
     </section>
   );
 };
