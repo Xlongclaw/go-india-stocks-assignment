@@ -1,4 +1,3 @@
-'use client'
 import React from "react";
 import { BiComment, BiDiamond, BiHeart, BiShare } from "react-icons/bi";
 import { BsEye } from "react-icons/bs";
@@ -6,7 +5,7 @@ import DiscussionBtn from "./discussion-btn";
 import ProfileContainer from "./profile-container";
 import { OTHER_USERS_DATA } from "@/constants/USER_DATA";
 import MemberTag from "./member-tag";
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 type PropsType = {
   post: {
@@ -27,7 +26,10 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
           return (
-            <div className="flex font-bold poppins items-center justify-between border-b-2 border-x-light-white border-dashed pb-4">
+            <div
+              key={userData.userName}
+              className="flex font-bold poppins items-center justify-between border-b-2 border-x-light-white border-dashed pb-4"
+            >
               <ProfileContainer
                 des={userData.des}
                 image={userData.userImage}
@@ -43,35 +45,42 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
             </div>
           );
       })}
-      <motion.div layout className="flex md:flex-row flex-col items-center">
-      <p className="text-xl text-x-accent-base my-4 poppins font-bold transition-all mr-4">
-        {props.post.postText}
-      </p>
-      <div className="flex my-4 w-full justify-between">
-        {props.post.images.map((image) => (
-          
-          <img style={{width:`${98/props.post.images.length}%`,borderRadius:20,objectFit:'cover',maxHeight:160}} src={image} key={image} alt="" />
-        ))}
+      <div className="flex md:flex-row flex-col items-center">
+        <p className="text-xl text-x-accent-base my-4 poppins font-bold transition-all mr-4">
+          {props.post.postText}
+        </p>
+        <div className="flex my-4 w-full justify-between">
+          {props.post.images.map((image) => (
+            <Image
+              style={{
+                width: `${98 / props.post.images.length}%`,
+                borderRadius: 20,
+                objectFit: "cover",
+                maxHeight: 160,
+              }}
+              src={image}
+              key={image}
+              alt=""
+            />
+          ))}
+        </div>
       </div>
-        
-      </motion.div>
       <div className="border- border-x-accent-light/20 flex border-">
-        <DiscussionBtn
-          color="RED"
-          title={props.post.likes.toString()}
-          children={<BiHeart />}
-        />
-        <DiscussionBtn
-          color="BLACK"
-          title={props.post.views.toString()}
-          children={<BsEye />}
-        />
+        <DiscussionBtn color="RED" title={props.post.likes.toString()}>
+          <BiHeart />
+        </DiscussionBtn>
+        <DiscussionBtn color="BLACK" title={props.post.views.toString()}>
+          <BsEye />
+        </DiscussionBtn>
         <DiscussionBtn
           color="BLUE"
           title={`${props.post.comments.length} Comments`}
-          children={<BiComment />}
-        />
-        <DiscussionBtn color="BLUE" title="Share" children={<BiShare />} />
+        >
+          <BiComment />
+        </DiscussionBtn>
+        <DiscussionBtn color="BLUE" title="Share">
+          <BiShare />
+        </DiscussionBtn>
       </div>
     </div>
   );

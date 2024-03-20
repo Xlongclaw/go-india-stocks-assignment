@@ -1,11 +1,12 @@
 import React from "react";
 import USER_DATA from "@/constants/USER_DATA";
 import { BiNotification } from "react-icons/bi";
+import Image from "next/image";
 
 const UserInfoSection: React.FC = () => {
   return (
     <div className="m-4 p-4 flex items-center gap-4 hover:bg-x-accent-light rounded-xl cursor-pointer transition-colors">
-      <img
+      <Image
         className="w-12 h-12 rounded-full"
         src={USER_DATA.userImage}
         alt=""

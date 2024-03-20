@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import React, { useState } from "react";
 
 const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
@@ -19,7 +20,7 @@ const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
       <div className="overflow-hidden">
         <div className="flex transition-transform duration-500 ease-in-out transform" style={{ width: `${images.length * 100}%`, transform: `translateX(-${currentIndex * (100 / images.length)}%)` }}>
           {images.map((image, index) => (
-            <img key={index} src={image} alt={`slide-${index}`} className="w-64 h-48 object-cover" />
+            <Image key={index} src={image} alt={`slide-${index}`} className="w-64 h-48 object-cover" />
           ))}
         </div>
       </div>

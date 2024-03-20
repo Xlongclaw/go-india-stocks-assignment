@@ -1,4 +1,5 @@
 import { MarketStoriesType } from "@/types";
+import Image from "next/image";
 import React from "react";
 
 type PropsType = MarketStoriesType;
@@ -6,7 +7,7 @@ type PropsType = MarketStoriesType;
 const StoriesWrapper: React.FC<PropsType> = (props) => {
   return (
     <div className="shadow-md rounded-2xl shadow6 overflow-hidden my-4">
-      <img src={props.image} alt="" />
+      <Image src={props.image} alt="" />
       <div className="p-5">
         <h3 className="font-bold text-sm text-x-accent-base">{props.title}</h3>
         <h5 className="text-xs text-x-sky-blue font-bold mt-2">{props.date}</h5>

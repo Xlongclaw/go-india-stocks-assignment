@@ -20,7 +20,7 @@ const DiscussionBtn: React.FC<PropsType> = (props) => {
       )}
     >
       {props.children}
-      <h4 className="text-xs poppins font-medium">{props.title}</h4>
+      <h4 className="text-xs poppins font-medium md:block hidden">{props.title}</h4>
     </div>
   );
 };
