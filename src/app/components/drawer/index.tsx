@@ -12,7 +12,7 @@ const Drawer = () => {
   return (
     <section
       ref={ref}
-      className={classNames("bg-x-accent-base text-white h-full flex")}
+      className={classNames("bg-x-accent-base text-white h-full fixed lg:static z-10 flex")}
     >
       <motion.div
       initial={{width:0}}

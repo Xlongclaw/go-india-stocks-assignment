@@ -13,6 +13,11 @@ const config: Config = {
         "x-accent-light":"#31363F",
         "x-sky-blue":"#76ABAE",
         "x-light-white":"#EEEEEE",
+      },
+      screens:{
+        xl:"1200px",
+        lg:"950px",
+        md:"650px",
       }
     },
   },

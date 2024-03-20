@@ -7,7 +7,7 @@ import { GiDiscussion } from "react-icons/gi";
 
 const DiscussionForum = () => {
   return (
-    <div className=" pr-0 w-3/4 relative border-r">
+    <div className=" pr-0 w-suto relative border-r ml-4 lg:ml-0">
       <div className="flex justify-between items-center py-4 px-6 glass">
         <div className="flex gap-3 items-center">
           <GiDiscussion/>

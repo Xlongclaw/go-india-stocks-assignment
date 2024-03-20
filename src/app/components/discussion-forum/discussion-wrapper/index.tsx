@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { BiComment, BiDiamond, BiHeart, BiShare } from "react-icons/bi";
 import { BsEye } from "react-icons/bs";
@@ -5,6 +6,7 @@ import DiscussionBtn from "./discussion-btn";
 import ProfileContainer from "./profile-container";
 import { OTHER_USERS_DATA } from "@/constants/USER_DATA";
 import MemberTag from "./member-tag";
+import { motion } from "framer-motion";
 
 type PropsType = {
   post: {
@@ -41,7 +43,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
             </div>
           );
       })}
-      <div className="flex items-center">
+      <motion.div layout className="flex md:flex-row flex-col items-center">
       <p className="text-xl text-x-accent-base my-4 poppins font-bold transition-all mr-4">
         {props.post.postText}
       </p>
@@ -52,7 +54,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
         ))}
       </div>
         
-      </div>
+      </motion.div>
       <div className="border- border-x-accent-light/20 flex border-">
         <DiscussionBtn
           color="RED"
