@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { BiComment, BiDiamond, BiHeart, BiShare } from "react-icons/bi";
 import { BsEye } from "react-icons/bs";
@@ -6,6 +7,7 @@ import ProfileContainer from "./profile-container";
 import { OTHER_USERS_DATA } from "@/constants/USER_DATA";
 import MemberTag from "./member-tag";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type PropsType = {
   post: {
@@ -22,7 +24,13 @@ type PropsType = {
 
 const DiscussionWrapper: React.FC<PropsType> = (props) => {
   return (
-    <div className=" pb-0 p-4 rounded-xl bg-white mb-6 shadow6 hover:shadow-non cursor-pointer transition-all">
+    <motion.div
+      // initial={{ scale: 0.95,opacity:0 }}
+      // whileInView={{ scale: 1 ,opacity:1}}
+      // transition={{type:'spring'}}
+      // whileHover={{scale:1.01}}
+      className=" pb-0 p-4 rounded-xl bg-white mb-3 xs:ml-4 xs:mr-2 shadow6 hover:shadow-non cursor-pointer"
+    >
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
           return (
@@ -84,7 +92,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
           <BiShare />
         </DiscussionBtn>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

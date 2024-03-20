@@ -8,22 +8,29 @@ import { motion } from "framer-motion";
 
 const Drawer = () => {
   const ref = React.createRef<HTMLDivElement>();
-  const [expand, setExpand] = React.useState(true);
+  const [expand, setExpand] = React.useState(false);
   return (
     <section
       ref={ref}
-      className={classNames("bg-x-accent-base text-white h-full fixed lg:static z-10 flex")}
+      className={classNames(
+        "bg-x-accent-base text-white h-full fixed lg:static z-10 flex"
+      )}
     >
       <motion.div
-      initial={{width:0}}
-      animate={expand ? {width:320} :{width:0,opacity:0 ,pointerEvents:'none'}}
-      transition={{type:'spring',stiffness:200,damping:40}}
-        className={classNames(" overflow-hidden",{})}
+        initial={{ width: 0 }}
+        animate={
+          expand
+            ? { width: 320 }
+            : { width: 0, opacity: 0, pointerEvents: "none" }
+        }
+        transition={{ type: "spring", stiffness: 200, damping: 40 }}
+        className={classNames(" overflow-hidden", {})}
       >
         <UserInfoSection />
         <OptionsList />
       </motion.div>
       <DrawerToggleBtn
+        expanded={expand}
         handlePress={() => {
           setExpand((x) => !x);
         }}
@@ -33,7 +40,6 @@ const Drawer = () => {
 };
 
 export default Drawer;
-
 
 // {
 //   "w-80": expand,

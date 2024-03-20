@@ -6,7 +6,7 @@ type PropsType = MarketStoriesType;
 
 const StoriesWrapper: React.FC<PropsType> = (props) => {
   return (
-    <div className="shadow-md rounded-2xl shadow6 overflow-hidden my-4">
+    <div className=" bg-white rounded-2xl shadow6 poppins overflow-hidden my-4">
       <Image src={props.image} width={500}
             height={500} alt="" />
       <div className="p-5">

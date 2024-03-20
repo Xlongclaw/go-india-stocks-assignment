@@ -17,52 +17,46 @@ const DRAWER_DATA = [
   },
   {
     icon: BiDollar,
-    link: "#",
+    link: "/market-stories",
     title: "Market Stories",
     subCategories: [],
   },
   {
     icon: MdSentimentSatisfied,
-    link: "#",
+    link: "/sentiments",
     title: "Sentiments",
-    subCategories: [
-      {
-        link: "#",
-        title: "Market",
-      },
-    ],
+    subCategories: [],
   },
   {
     icon: BiTrendingUp,
-    link: "#",
+    link: "/market",
     title: "Market",
     subCategories: [],
   },
   {
     icon: BiArea,
-    link: "#",
+    link: "/sector",
     title: "Sector",
     subCategories: [],
   },
   {
     icon: BsList,
-    link: "#",
+    link: "/watchlist",
     title: "WatchList",
     subCategories: [],
   },
   {
     icon: MdEvent,
-    link: "#",
+    link: "/events",
     title: "Events",
     subCategories: [],
   },
   {
     icon: BiNews,
-    link: "#",
+    link: "/news",
     title: "News",
     subCategories: [],
   },
 ];
 
-
-export default DRAWER_DATA
+export default DRAWER_DATA;

@@ -5,7 +5,7 @@ import MARKET_STORIES from "@/constants/MARKET_STORIES";
 
 const MarketStories = () => {
   return (
-    <div className="p-4 w-[30rem] overflow-y-auto x-scroll hidden xl:block">
+    <div className="px-[6px] w-[30rem] overflow-y-auto x-scroll hidden xl:block">
       {/* <h3 className="font-bold text-x-accent-base oswald text-sm my-4 text-center">
         MARKET STORIES
       </h3> */}
