@@ -52,6 +52,8 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
         <div className="flex my-4 w-full justify-between">
           {props.post.images.map((image) => (
             <Image
+              width={500}
+              height={500}
               style={{
                 width: `${98 / props.post.images.length}%`,
                 borderRadius: 20,

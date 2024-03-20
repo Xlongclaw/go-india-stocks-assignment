@@ -10,6 +10,8 @@ const UserInfoSection: React.FC = () => {
         className="w-12 h-12 rounded-full"
         src={USER_DATA.userImage}
         alt=""
+        width={500}
+            height={500}
       />
       <div>
         <h4 className="font-medium text-nowrap">Hello, {USER_DATA.name}</h4>
