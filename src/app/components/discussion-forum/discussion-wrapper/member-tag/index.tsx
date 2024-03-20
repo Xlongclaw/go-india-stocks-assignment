@@ -28,7 +28,7 @@ const MemberTag: React.FC<PropsType> = (props) => {
         }
       )}
     >
-      <div className="w-3 h-3 rounded-full bg-white"></div>
+      <div className="w-3 h-3 rounded-full bg-white xs:block hidden"></div>
       <h3 className="text-white text-[10px] mt-[1px] font-medium flex items-center">
         {props.tag}
       </h3>

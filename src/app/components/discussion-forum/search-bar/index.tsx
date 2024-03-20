@@ -3,7 +3,7 @@ import { BiSearch } from "react-icons/bi";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center gap-2 border-2 border-x-accent-base/90 px-4 rounded-xl">
+    <div className="xl:flex items-center gap-2 border-2 border-x-accent-base/90 px-4 rounded-xl hidden">
       <BiSearch />
       <input
         type="text"

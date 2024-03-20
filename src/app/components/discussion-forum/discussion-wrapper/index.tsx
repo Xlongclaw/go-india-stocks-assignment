@@ -36,9 +36,9 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
                 name={userData.name}
                 userName={userData.userName}
               />
-              <div className="flex flex-col items-end gap-2">
+              <div className="flex flex-col xs:items-end items-center gap-2 ">
                 <MemberTag tag={userData.status} />
-                <h4 className="text-xs font-medium text-x-accent-base/80">
+                <h4 className="xs:text-xs text-[10px] font-medium text-x-accent-base/80">
                   {props.post.postedAt}
                 </h4>
               </div>
@@ -46,7 +46,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
           );
       })}
       <div className="flex md:flex-row flex-col items-center">
-        <p className="text-xl text-x-accent-base my-4 poppins font-bold transition-all mr-4">
+        <p className="sm:text-xl xs:text-base text-sm text-x-accent-base my-4 poppins font-bold transition-all mr-4">
           {props.post.postText}
         </p>
         <div className="flex my-4 w-full justify-between">

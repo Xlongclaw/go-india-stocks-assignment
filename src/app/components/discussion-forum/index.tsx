@@ -1,5 +1,5 @@
 import React from "react";
-import { BiComment, BiHeart } from "react-icons/bi";
+import { BiComment, BiDollar, BiHeart } from "react-icons/bi";
 import DiscussionWrapper from "./discussion-wrapper";
 import SearchBar from "./search-bar";
 import DISCUSSION_DATA from "@/constants/DISCUSSION_DATA";
@@ -8,15 +8,19 @@ import { GiDiscussion } from "react-icons/gi";
 const DiscussionForum = () => {
   return (
     <div className=" pr-0 w-suto relative border-r ml-4 lg:ml-0">
-      <div className="flex justify-between items-center py-4 px-6 glass">
-        <div className="flex gap-3 items-center">
+      <div className="flex justify-between items-center h-[72px] px-6 glass font-medium sm:font-semibold oswald text-x-accent-base text-sm sm:text-base">
+        <div className="flex gap-3 items-center w-1/2 xl:w-auto justify-center xl:border-b-0 border-b-2 border-x-accent-base h-full">
           <GiDiscussion/>
-          <h2 className="font-semibold oswald text-x-accent-base text-base ">
+          <h2 className=" ">
             Discussions Forum
           </h2>
-          {/* <h2 className=" text-x-sky-blue poppins text-xs font-medium">
-            Dive deep inside the market.
-          </h2> */}
+        </div>
+        <div className="h-2/3 w-[1px] bg-x-accent-light/20 block xl:hidden"></div>
+        <div className="flex gap-3 items-center w-1/2 xl:hidden justify-center  h-full">
+          <BiDollar/>
+          <h2 className=" ">
+            Market Stories
+          </h2>
         </div>
         <div>
           <SearchBar />
