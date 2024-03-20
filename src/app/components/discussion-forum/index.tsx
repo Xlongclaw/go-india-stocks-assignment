@@ -8,7 +8,7 @@ import { GiDiscussion } from "react-icons/gi";
 const DiscussionForum = () => {
   return (
     <div className=" pr-0 w-auto relative ml-4 lg:ml-0">
-      <div className="flex justify-between items-center h-[72px] px-6 ml-4 mr-2 my-3 rounded-xl
+      <div className="flex justify-between items-center h-[72px] px-6 sm:ml-4 ml-3 mr-2 my-3 rounded-xl
        shadow6 bg-white font-medium sm:font-semibold oswald text-x-accent-base text-sm sm:text-base">
         <div className="flex gap-3 items-center w-1/2 xl:w-auto justify-center xl:border-b-0 border-b-2 border-x-accent-base h-full">
           <GiDiscussion/>
@@ -27,7 +27,7 @@ const DiscussionForum = () => {
           <SearchBar />
         </div>
       </div>
-      <div className="overflow-y-scroll h-full x-scroll xs:px-0 px-3 pb-24 rounded-xl">
+      <div className="overflow-y-scroll h-full x-scroll sm:px-0 px-3 pb-24 rounded-xl">
       {DISCUSSION_DATA.map((post) => (
         <DiscussionWrapper key={post._id} post={post} />
       ))}

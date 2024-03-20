@@ -29,7 +29,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
       // whileInView={{ scale: 1 ,opacity:1}}
       // transition={{type:'spring'}}
       // whileHover={{scale:1.01}}
-      className=" pb-0 p-4 rounded-xl bg-white mb-3 xs:ml-4 xs:mr-2 shadow6 hover:shadow-non cursor-pointer"
+      className=" pb-0 p-4 rounded-xl bg-white mb-3 sm:ml-4 ml-0 sm:mr-2 shadow6 hover:shadow-non cursor-pointer"
     >
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
