@@ -15,7 +15,7 @@ const DiscussionForum = () => {
             Discussions Forum
           </h2>
         </div>
-        <div className="h-2/3 w-[1px] bg-x-accent-light/20 block xl:hidden"></div>
+        <div className="h-1/3 w-[1px] bg-x-accent-light/20 block xl:hidden"></div>
         <div className="flex gap-3 items-center w-1/2 xl:hidden justify-center  h-full">
           <BiDollar/>
           <h2 className=" ">
@@ -26,7 +26,7 @@ const DiscussionForum = () => {
           <SearchBar />
         </div>
       </div>
-      <div className="overflow-y-scroll h-full x-scroll px-5 py-3 pb-12">
+      <div className="overflow-y-scroll h-full x-scroll xs:px-5 px-3 py-3 pb-12">
       {DISCUSSION_DATA.map((post) => (
         <DiscussionWrapper key={post._id} post={post} />
       ))}

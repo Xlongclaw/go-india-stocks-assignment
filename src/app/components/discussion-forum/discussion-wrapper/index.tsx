@@ -49,7 +49,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
         <p className="sm:text-xl xs:text-base text-sm text-x-accent-base my-4 poppins font-bold transition-all mr-4">
           {props.post.postText}
         </p>
-        <div className="flex my-4 w-full justify-between">
+        <div className="flex sm:my-4 mb-2 w-full justify-between">
           {props.post.images.map((image) => (
             <Image
               width={500}
@@ -67,7 +67,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
           ))}
         </div>
       </div>
-      <div className="border- border-x-accent-light/20 flex border-">
+      <div className="border- border-x-accent-light/20 flex border-t-2 border-dashed border-x-light-white">
         <DiscussionBtn color="RED" title={props.post.likes.toString()}>
           <BiHeart />
         </DiscussionBtn>
