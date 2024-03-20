@@ -19,7 +19,7 @@ const OptionsList: React.FC = () => {
         >
           <div className="flex items-center gap-2">
             {React.createElement(data.icon)}
-            <h4 className="text-sm">{data.title}</h4>
+            <h4 className="text-sm text-nowrap">{data.title}</h4>
           </div>
           {data.subCategories.length !== 0 && <BiCaretRight className="ml-6" />}
         </div>

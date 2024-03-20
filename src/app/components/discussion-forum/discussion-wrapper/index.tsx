@@ -21,11 +21,11 @@ type PropsType = {
 
 const DiscussionWrapper: React.FC<PropsType> = (props) => {
   return (
-    <div className="border border-x-accent-light/20 pb-0 p-6 rounded-3xl mb-8 shadow hover:shadow-none cursor-pointer transition-all">
+    <div className=" pb-0 p-4 rounded-xl bg-white mb-6 shadow6 hover:shadow-non cursor-pointer transition-all">
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
           return (
-            <div className="flex font-bold poppins items-center justify-between">
+            <div className="flex font-bold poppins items-center justify-between border-b-2 border-x-light-white border-dashed pb-4">
               <ProfileContainer
                 des={userData.des}
                 image={userData.userImage}
@@ -41,16 +41,19 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
             </div>
           );
       })}
-      <div className="flex my-4 justify-between">
+      <div className="flex items-center">
+      <p className="text-xl text-x-accent-base my-4 poppins font-bold transition-all mr-4">
+        {props.post.postText}
+      </p>
+      <div className="flex my-4 w-full justify-between">
         {props.post.images.map((image) => (
           
           <img style={{width:`${98/props.post.images.length}%`,borderRadius:20,objectFit:'cover',maxHeight:160}} src={image} key={image} alt="" />
         ))}
       </div>
-      <p className="text-2xl text-x-accent-base my-4 poppins font-bold ">
-        {props.post.postText}
-      </p>
-      <div className="border-t border-x-accent-light/20 flex border-l">
+        
+      </div>
+      <div className="border- border-x-accent-light/20 flex border-">
         <DiscussionBtn
           color="RED"
           title={props.post.likes.toString()}
