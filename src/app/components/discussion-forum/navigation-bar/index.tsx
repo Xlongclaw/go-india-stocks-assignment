@@ -15,7 +15,7 @@ import SearchBar from "./search-bar";
 const NavigationBar = () => {
   return (
     <div
-      className="flex justify-between items-center h-[72px] px-6 sm:ml-4 ml-3 mr-2 my-3 rounded-xl 
+      className="flex justify-between items-center h-[72px] px-6 sm:ml-4 ml-3 mr-3 sm:mr-2 my-3 rounded-xl 
     shadow6 bg-white font-medium sm:font-semibold oswald text-x-accent-base text-sm sm:text-base"
     >
       {/* Discussion Forum section */}

@@ -3,7 +3,7 @@
  * @description A component representing a loading screen or animation.
  */
 
-import LoadingScreen from '@/components/loading'; // Importing the LoadingScreen component
+import LoadingScreen from '@/components/loading-screen'; // Importing the LoadingScreen component
 import React from 'react';
 
 /**

@@ -21,7 +21,7 @@ const Drawer = () => {
   return (
     <section
       className={classNames(
-        "bg-x-accent-base text-white h-full fixed lg:static z-10 flex"
+        "bg-x-accent-base text-white h-full fixed lg:static z-30 flex"
       )}
     >
       {/* Motion div for animation */}
