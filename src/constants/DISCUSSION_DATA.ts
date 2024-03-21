@@ -39,7 +39,7 @@ const DISCUSSION_DATA = [
     comments: [{}, {}, {}, {}],
   },
   {
-    _id: "HJKR673YUU",
+    _id: "HJKR67GHYU",
     postedBy: "walterwhite410",
     postText:
       "700 points correction done … most of the people are just a audience… 😎",
@@ -54,7 +54,7 @@ const DISCUSSION_DATA = [
     comments: [{}, {}, {}, {}],
   },
   {
-    _id: "HJKR673YUU",
+    _id: "HJKR789UU",
     postedBy: "walterwhite410",
     postText:
       "700 points correction done … most of the people are just a audience… 😎",
