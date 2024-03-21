@@ -1,8 +1,17 @@
-type MarketStoriesType = {
-  title:string,
-  shortDes:string,
-  date:string,
-  image:string
-}
+export interface MarketStoriesType {
+  title: string;
+  shortDes: string;
+  date: string;
+  image: string;
+};
 
-export type {MarketStoriesType}
+export interface PostType {
+  _id: string;
+  postedBy: string;
+  postText: string;
+  postedAt: string;
+  likes: number;
+  views: number;
+  images: Array<string>;
+  comments: Array<{}>;
+}

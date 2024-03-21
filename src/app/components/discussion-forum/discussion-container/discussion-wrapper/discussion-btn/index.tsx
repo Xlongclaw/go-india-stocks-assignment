@@ -1,12 +1,25 @@
+/**
+ * @file DiscussionBtn.tsx
+ * @description A component representing a discussion button with different styles based on the color.
+ */
+
 import classNames from "classnames";
 import React from "react";
 
+/**
+ * Props interface for DiscussionBtn component.
+ */
 type PropsType = {
-  children: React.JSX.Element;
-  title: string;
-  color: "RED" | "BLACK" | "BLUE";
+  children: React.JSX.Element; // Button icon or content
+  title: string; // Button title
+  color: "RED" | "BLACK" | "BLUE"; // Button color
 };
 
+/**
+ * DiscussionBtn component represents a discussion button with different styles based on the color.
+ * @param props - Props for the DiscussionBtn component.
+ * @returns - JSX element representing the DiscussionBtn component.
+ */
 const DiscussionBtn: React.FC<PropsType> = (props) => {
   return (
     <div
@@ -19,7 +32,9 @@ const DiscussionBtn: React.FC<PropsType> = (props) => {
         }
       )}
     >
+      {/* Button content */}
       {props.children}
+      {/* Button title */}
       <h4 className="text-xs poppins font-medium md:block hidden">{props.title}</h4>
     </div>
   );

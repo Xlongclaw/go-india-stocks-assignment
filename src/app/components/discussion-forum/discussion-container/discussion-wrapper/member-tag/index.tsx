@@ -1,6 +1,14 @@
+/**
+ * @file MemberTag.tsx
+ * @description A component representing a member tag with different styles based on the tag type.
+ */
+
 import classNames from "classnames";
 import React from "react";
 
+/**
+ * Props interface for MemberTag component.
+ */
 type PropsType = {
   tag:
     | "Legend"
@@ -12,6 +20,11 @@ type PropsType = {
     | "Rookie";
 };
 
+/**
+ * MemberTag component represents a member tag with different styles based on the tag type.
+ * @param props - Props for the MemberTag component.
+ * @returns - JSX element representing the MemberTag component.
+ */
 const MemberTag: React.FC<PropsType> = (props) => {
   return (
     <div
@@ -28,7 +41,9 @@ const MemberTag: React.FC<PropsType> = (props) => {
         }
       )}
     >
+      {/* Tag icon */}
       <div className="w-3 h-3 rounded-full bg-white xs:block hidden"></div>
+      {/* Tag text */}
       <h3 className="text-white text-[10px] mt-[1px] font-medium flex items-center">
         {props.tag}
       </h3>

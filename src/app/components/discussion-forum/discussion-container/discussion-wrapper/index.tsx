@@ -1,36 +1,34 @@
-"use client";
+/**
+ * @file DiscussionWrapper.tsx
+ * @description A component for displaying discussion items with user data and interaction buttons.
+ */
+
+"use client"; // Importing the client module
 import React from "react";
-import { BiComment, BiDiamond, BiHeart, BiShare } from "react-icons/bi";
-import { BsEye } from "react-icons/bs";
-import DiscussionBtn from "./discussion-btn";
 import ProfileContainer from "./profile-container";
-import { OTHER_USERS_DATA } from "@/constants/USER_DATA";
+import { OTHER_USERS_DATA } from "@/constants/USER_DATA"; // Importing constant user data
 import MemberTag from "./member-tag";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PostType } from "@/types";
+import ButtonGroup from "./button-group";
 
+/**
+ * Props interface for DiscussionWrapper component.
+ */
 type PropsType = {
-  post: {
-    _id: string;
-    postedBy: string;
-    postText: string;
-    postedAt: string;
-    likes: number;
-    views: number;
-    images: Array<string>;
-    comments: Array<{}>;
-  };
+  post: PostType;
 };
 
+/**
+ * DiscussionWrapper component displays discussion items with user data and interaction buttons.
+ * @param props - Props for the DiscussionWrapper component.
+ * @returns - JSX element representing the DiscussionWrapper component.
+ */
 const DiscussionWrapper: React.FC<PropsType> = (props) => {
   return (
-    <motion.div
-      // initial={{ scale: 0.95,opacity:0 }}
-      // whileInView={{ scale: 1 ,opacity:1}}
-      // transition={{type:'spring'}}
-      // whileHover={{scale:1.01}}
-      className=" pb-0 p-4 rounded-xl bg-white mb-3 sm:ml-4 ml-0 sm:mr-2 shadow6 hover:shadow-non cursor-pointer"
-    >
+    <motion.div className="pb-0 p-4 rounded-xl bg-white mb-3 sm:ml-4 ml-0 sm:mr-2 shadow6 hover:shadow-non cursor-pointer">
+      {/* Mapping through other users data */}
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
           return (
@@ -58,6 +56,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
           {props.post.postText}
         </p>
         <div className="flex sm:my-4 mb-2 w-full justify-between">
+          {/* Mapping through post images */}
           {props.post.images.map((image) => (
             <Image
               width={500}
@@ -75,23 +74,9 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
           ))}
         </div>
       </div>
-      <div className="border- border-x-accent-light/20 flex border-t-2 border-dashed border-x-light-white">
-        <DiscussionBtn color="RED" title={props.post.likes.toString()}>
-          <BiHeart />
-        </DiscussionBtn>
-        <DiscussionBtn color="BLACK" title={props.post.views.toString()}>
-          <BsEye />
-        </DiscussionBtn>
-        <DiscussionBtn
-          color="BLUE"
-          title={`${props.post.comments.length} Comments`}
-        >
-          <BiComment />
-        </DiscussionBtn>
-        <DiscussionBtn color="BLUE" title="Share">
-          <BiShare />
-        </DiscussionBtn>
-      </div>
+
+      {/* Button group renders 4 interation button - like, comment, views, share */}
+      <ButtonGroup post={props.post} />
     </motion.div>
   );
 };
