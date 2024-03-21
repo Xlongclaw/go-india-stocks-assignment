@@ -9,7 +9,7 @@ import React from "react";
 /**
  * Props interface for MemberTag component.
  */
-type PropsType = {
+interface PropsType  {
   tag:
     | "Legend"
     | "Diamond"

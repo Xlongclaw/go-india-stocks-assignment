@@ -9,7 +9,7 @@ import React from "react";
 /**
  * Props interface for DiscussionBtn component.
  */
-type PropsType = {
+interface PropsType {
   children: React.JSX.Element; // Button icon or content
   title: string; // Button title
   color: "RED" | "BLACK" | "BLUE"; // Button color

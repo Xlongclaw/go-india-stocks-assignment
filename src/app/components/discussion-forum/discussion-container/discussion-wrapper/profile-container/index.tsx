@@ -9,7 +9,7 @@ import React from "react";
 /**
  * Props interface for ProfileContainer component.
  */
-type PropsType = {
+interface PropsType {
   image: string; // User profile image URL
   name: string; // User's name
   userName: string; // User's username

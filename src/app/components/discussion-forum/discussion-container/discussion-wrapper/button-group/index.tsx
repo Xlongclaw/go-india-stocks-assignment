@@ -25,21 +25,18 @@ const ButtonGroup: React.FC<PropsType> = (props) => {
   return (
     <div className="border- border-x-accent-light/20 flex border-t-2 border-dashed border-x-light-white">
       {/* Interaction buttons */}
-      <DiscussionBtn color="RED" title={props.post.likes.toString()}>
-        <BiHeart />
-      </DiscussionBtn>
-      <DiscussionBtn color="BLACK" title={props.post.views.toString()}>
-        <BsEye />
-      </DiscussionBtn>
-      <DiscussionBtn
-        color="BLUE"
-        title={`${props.post.comments.length} Comments`}
-      >
-        <BiComment />
-      </DiscussionBtn>
-      <DiscussionBtn color="BLUE" title="Share">
-        <BiShare />
-      </DiscussionBtn>
+
+      {/* Like Button */}
+      <DiscussionBtn color="RED" title={props.post.likes.toString()}><BiHeart /></DiscussionBtn>
+
+      {/* Views Button */}
+      <DiscussionBtn color="BLACK" title={props.post.views.toString()}><BsEye /></DiscussionBtn>
+
+      {/* Comment Button */}
+      <DiscussionBtn color="BLUE" title={`${props.post.comments.length} Comments`}><BiComment /></DiscussionBtn>
+
+      {/* Share Button */}
+      <DiscussionBtn color="BLUE" title="Share"><BiShare /></DiscussionBtn>
     </div>
   );
 };
