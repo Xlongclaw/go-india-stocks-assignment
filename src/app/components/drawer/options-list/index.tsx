@@ -7,7 +7,7 @@
 import DRAWER_DATA from "@/constants/DRAWER_DATA"; // Importing drawer data from constants
 import classNames from "classnames";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { BiCaretRight } from "react-icons/bi";
 
@@ -15,18 +15,28 @@ import { BiCaretRight } from "react-icons/bi";
  * OptionsList component represents a list of options for the drawer.
  * @returns - JSX element representing the OptionsList component.
  */
-const OptionsList: React.FC = () => {
+const OptionsList: React.FC<{expand:()=>void}> = (props) => {
   const selected = usePathname();
+  const router = useRouter()
+
+  const handleClick = (link:string)=>{
+
+    // Navigating to another link
+    router.push(link);
+    
+    // Triggered when any drawer option is Pressed so that it can hise the drawer on click
+    props.expand()
+  }
 
   return (
-    <div className="overflow-y-scroll flex-1">
+    <div className=" w-full">
       {/* Mapping through drawer data */}
       {DRAWER_DATA.map((data) => (
-        <Link
-          href={data.link}
+        <button
+          onClick={()=>handleClick(data.link)}
           key={data.title}
           className={classNames(
-            "flex gap-2 rounded-x items-center py-5 px-12 hover:bg-x-accent-light cursor-pointer transition-colors my-1 justify-between",
+            "flex gap-2 rounded-x w-full items-center py-5 px-12 hover:bg-x-accent-light cursor-pointer transition-colors my-1 justify-between",
             {
               "bg-x-accent-light": selected === data.link,
             }
@@ -40,7 +50,7 @@ const OptionsList: React.FC = () => {
           </div>
           {/* Subcategories arrow */}
           {data.subCategories.length !== 0 && <BiCaretRight className="ml-6" />}
-        </Link>
+        </button>
       ))}
     </div>
   );

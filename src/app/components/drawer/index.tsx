@@ -35,12 +35,15 @@ const Drawer = () => {
         transition={{ type: "spring", stiffness: 200, damping: 40 }}
         className={classNames("overflow-hidden", {})}
       >
-
         {/* User information section */}
         <UserInfoSection />
 
         {/* Options list */}
-        <OptionsList />
+        <OptionsList
+          expand={() => {
+            setExpand(false);
+          }}
+        />
       </motion.div>
 
       {/* Drawer toggle button */}

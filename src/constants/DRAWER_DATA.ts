@@ -1,5 +1,5 @@
 import { BiDollar, BiTrendingUp, BiArea, BiNews } from "react-icons/bi";
-import { BsList } from "react-icons/bs";
+import { CgList } from "react-icons/cg";
 import { GoCommentDiscussion } from "react-icons/go";
 import { MdSentimentSatisfied, MdEvent } from "react-icons/md";
 
@@ -40,7 +40,7 @@ const DRAWER_DATA = [
     subCategories: [],
   },
   {
-    icon: BsList,
+    icon: CgList,
     link: "/watchlist",
     title: "WatchList",
     subCategories: [],
