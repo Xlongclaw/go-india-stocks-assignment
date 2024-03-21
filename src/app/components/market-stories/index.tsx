@@ -6,14 +6,17 @@
 import React from "react";
 import StoriesWrapper from "./stories-wapper";
 import MARKET_STORIES from "@/constants/MARKET_STORIES";
+import classNames from "classnames";
 
 /**
  * MarketStories component represents market stories with a list of stories.
  * @returns - JSX element representing the MarketStories component.
  */
-const MarketStories = () => {
+const MarketStories:React.FC<{hideOnPhone?:boolean}> = ({hideOnPhone=true}) => {
   return (
-    <div className="px-[6px] w-[30rem] overflow-y-auto x-scroll hidden xl:block">
+    <div className={classNames("px-[6px] w-[30rem] overflow-y-auto x-scroll ",{
+      "hidden xl:block":hideOnPhone
+    })}>
       {/* Market stories list */}
       {MARKET_STORIES.map((story) => (
         <StoriesWrapper

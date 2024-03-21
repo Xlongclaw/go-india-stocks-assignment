@@ -14,7 +14,7 @@ import React from "react";
  */
 const StoriesWrapper: React.FC<MarketStoriesType> = (props) => {
   return (
-    <div className="bg-white rounded-2xl shadow6 poppins overflow-hidden my-4">
+    <div className="bg-white rounded-2xl shadow6 poppins overflow-hidden xl:my-4 my-2 xl:w-full lg:w-[31.7%] sm:w-[48%] w-full">
       {/* Story image */}
       <Image src={props.image} width={500} height={500} alt="" />
       <div className="p-5">
