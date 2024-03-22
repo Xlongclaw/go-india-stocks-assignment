@@ -1,4 +1,5 @@
-## Go India Stocks Assignment
+# Go India Stocks Assignment
+(Vercel Deploy Link)[https://go-india-stocks-assignment-delta.vercel.app/]
 
 I have developed this assignment in order to get selected as an intern in **Go India Stocks**. This assignment is just a prototype of discussion forum and market stories of a stock market web application.
 
