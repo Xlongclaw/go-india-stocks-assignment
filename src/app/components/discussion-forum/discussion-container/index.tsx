@@ -14,6 +14,7 @@ import DiscussionWrapper from './discussion-wrapper';
 const DiscussionContainer = () => {
   return (
     <div className="overflow-y-scroll h-full x-scroll sm:px-0 px-3 pb-24 rounded-xl">
+      
       {/* Mapping through discussion data */}
       {DISCUSSION_DATA.map((post) => (
         <DiscussionWrapper key={post._id} post={post} />

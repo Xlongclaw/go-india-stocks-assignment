@@ -27,8 +27,8 @@ const ProfileContainer: React.FC<PropsType> = (props) => {
       {/* User profile image */}
       <Image
         className="xs:w-14 xs:h-14 w-10 h-10 object-cover rounded-2xl"
-        width={500}
-        height={500}
+        width={100}
+        height={100}
         src={props.image}
         alt=""
       />

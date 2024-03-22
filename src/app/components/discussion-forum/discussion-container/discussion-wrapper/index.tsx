@@ -27,7 +27,7 @@ type PropsType = {
  */
 const DiscussionWrapper: React.FC<PropsType> = (props) => {
   return (
-    <motion.div className="pb-0 p-4 rounded-xl bg-white mb-3 sm:ml-4 ml-0 sm:mr-2 shadow6 hover:shadow-non cursor-pointer">
+    <div className="pb-0 p-4 rounded-xl bg-white mb-3 sm:ml-4 ml-0 sm:mr-2 shadow6 hover:shadow-non cursor-pointer">
       {/* Mapping through other users data */}
       {OTHER_USERS_DATA.map((userData) => {
         if (userData.userName === props.post.postedBy)
@@ -59,8 +59,8 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
           {/* Mapping through post images */}
           {props.post.images.map((image) => (
             <Image
-              width={500}
-              height={500}
+              width={300}
+              height={160}
               style={{
                 width: `${98 / props.post.images.length}%`,
                 borderRadius: 20,
@@ -77,7 +77,7 @@ const DiscussionWrapper: React.FC<PropsType> = (props) => {
 
       {/* Button group renders 4 interation button - like, comment, views, share */}
       <ButtonGroup post={props.post} />
-    </motion.div>
+    </div>
   );
 };
 
